@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin | JN Servicios Integrales</title>
+    <link rel="icon" type="image/jpeg" href="../images/logo.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- LOGIN -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-card">
+            <img src="../images/logo.jpeg" alt="Logo" class="login-logo">
+            <h1>Panel de Administración</h1>
+            <p>JN Servicios Integrales</p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUser">Usuario</label>
+                    <input type="text" id="loginUser" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Contraseña</label>
+                    <input type="password" id="loginPassword" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn-primary" id="loginBtn">Iniciar sesión</button>
+                <p id="loginError" class="error-msg"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- ADMIN PANEL -->
+    <div id="adminPanel" style="display:none">
+
+        <!-- TOP BAR -->
+        <header class="admin-topbar">
+            <div class="topbar-left">
+                <img src="../images/logo.jpeg" alt="Logo" class="topbar-logo">
+                <span>Admin Panel</span>
+            </div>
+            <div class="topbar-right">
+                <a href="../index.html" target="_blank" class="btn-secondary">Ver sitio</a>
+                <button id="logoutBtn" class="btn-secondary btn-danger-outline">Cerrar sesión</button>
+            </div>
+        </header>
+
+        <!-- ============ HERO ============ -->
+        <section class="admin-section section-hero">
+            <div class="section-label">Hero / Inicio</div>
+            <div class="section-preview-hero">
+                <div class="preview-badge" id="prev-hero-badge">Mantenimiento · Obras · Proyectos</div>
+                <div class="preview-title-hero">
+                    <span id="prev-hero-line1">Construimos</span>
+                    <span class="gold" id="prev-hero-line2">soluciones</span>
+                    <span id="prev-hero-line3">que perduran</span>
+                </div>
+                <div class="preview-sub" id="prev-hero-sub"></div>
+            </div>
+            <div class="edit-area">
+                <div class="form-grid">
+                    <div class="form-group full">
+                        <label>Badge / Etiqueta superior</label>
+                        <input type="text" id="hero-badge" placeholder="Mantenimiento · Obras · Proyectos">
+                    </div>
+                    <div class="form-group">
+                        <label>Título línea 1</label>
+                        <input type="text" id="hero-titleLine1" placeholder="Construimos">
+                    </div>
+                    <div class="form-group">
+                        <label>Título línea 2 (dorado)</label>
+                        <input type="text" id="hero-titleLine2" placeholder="soluciones">
+                    </div>
+                    <div class="form-group">
+                        <label>Título línea 3</label>
+                        <input type="text" id="hero-titleLine3" placeholder="que perduran">
+                    </div>
+                    <div class="form-group full">
+                        <label>Subtítulo</label>
+                        <textarea id="hero-subtitle" rows="2" placeholder="Servicios integrales adaptados..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Texto botón principal</label>
+                        <input type="text" id="hero-btnPrimary" placeholder="Solicitar presupuesto">
+                    </div>
+                    <div class="form-group">
+                        <label>Texto botón secundario</label>
+                        <input type="text" id="hero-btnSecondary" placeholder="Ver nuestras obras">
+                    </div>
+                </div>
+                <button class="btn-save" onclick="saveSection('hero')">Guardar Hero</button>
+            </div>
+        </section>
+
+        <!-- ============ MARQUEE / GENERAL ============ -->
+        <section class="admin-section section-marquee">
+            <div class="section-label">Marquee y Configuración general</div>
+            <div class="edit-area">
+                <div class="form-grid">
+                    <div class="form-group full">
+                        <label>Textos del marquee (separados por coma)</label>
+                        <textarea id="general-marqueeTexts" rows="2" placeholder="Mantenimiento, Obras civiles, Reformas integrales..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Número de WhatsApp (con código, sin +)</label>
+                        <input type="text" id="general-whatsappNumber" placeholder="5491112345678">
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje predeterminado de WhatsApp</label>
+                        <input type="text" id="general-whatsappMessage" placeholder="Hola, me interesa solicitar un presupuesto">
+                    </div>
+                </div>
+                <button class="btn-save" onclick="saveSection('general')">Guardar General</button>
+            </div>
+        </section>
+
+        <!-- ============ NOSOTROS ============ -->
+        <section class="admin-section section-about">
+            <div class="section-label">Nosotros</div>
+            <div class="about-layout">
+                <div class="about-img-side">
+                    <div class="dropzone" data-input="about-image" data-preview="about-image-preview">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                        <p>Arrastrá imagen o hacé clic</p>
+                        <input type="file" accept="image/*" class="dropzone-file">
+                    </div>
+                    <input type="text" id="about-image" placeholder="O pegá URL de imagen">
+                    <img id="about-image-preview" class="img-preview" src="" alt="Preview">
+                    <div class="stat-edit">
+                        <input type="number" id="about-statNumber" placeholder="100" class="stat-input">
+                        <input type="text" id="about-statSymbol" placeholder="%" class="stat-input small">
+                        <input type="text" id="about-statLabel" placeholder="Compromiso" class="stat-input">
+                    </div>
+                </div>
+                <div class="about-text-side">
+                    <div class="form-group">
+                        <label>Etiqueta</label>
+                        <input type="text" id="about-tag" placeholder="Sobre nosotros">
+                    </div>
+                    <div class="form-group">
+                        <label>Título (usa *texto* para dorado)</label>
+                        <input type="text" id="about-title" placeholder="Una pyme en constante *expansión*">
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <textarea id="about-description" rows="4" placeholder="En JN Servicios Integrales..."></textarea>
+                    </div>
+                    <div class="features-area">
+                        <label>Características</label>
+                        <div id="about-features-container"></div>
+                        <button class="btn-add" onclick="addFeature()">+ Agregar característica</button>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-save" onclick="saveSection('about')">Guardar Nosotros</button>
+        </section>
+
+        <!-- ============ SERVICIOS ============ -->
+        <section class="admin-section section-services">
+            <div class="section-label">Servicios</div>
+            <div class="edit-area">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Etiqueta</label>
+                        <input type="text" id="services-tag" placeholder="Lo que hacemos">
+                    </div>
+                    <div class="form-group">
+                        <label>Título (usa *texto* para dorado)</label>
+                        <input type="text" id="services-title" placeholder="Nuestros *servicios*">
+                    </div>
+                </div>
+            </div>
+            <div class="services-grid-admin" id="services-items-container"></div>
+            <button class="btn-add" onclick="addServiceItem()">+ Agregar servicio</button>
+            <button class="btn-save" onclick="saveSection('services')">Guardar Servicios</button>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="admin-section section-cta">
+            <div class="section-label">Llamada a la acción (CTA)</div>
+            <div class="cta-preview">
+                <div class="edit-area compact">
+                    <div class="form-group">
+                        <label>Título</label>
+                        <input type="text" id="cta-title" placeholder="¿Tienes un proyecto en mente?">
+                    </div>
+                    <div class="form-group">
+                        <label>Subtítulo</label>
+                        <input type="text" id="cta-subtitle" placeholder="Hablemos sobre cómo podemos hacerlo realidad.">
+                    </div>
+                    <div class="form-group">
+                        <label>Texto del botón</label>
+                        <input type="text" id="cta-btnText" placeholder="Escribinos por WhatsApp">
+                    </div>
+                    <button class="btn-save" onclick="saveSection('cta')">Guardar CTA</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ OBRAS / PORTFOLIO ============ -->
+        <section class="admin-section section-portfolio">
+            <div class="section-label">Obras / Portfolio</div>
+            <div class="edit-area">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Etiqueta</label>
+                        <input type="text" id="portfolio-tag" placeholder="Resultados reales">
+                    </div>
+                    <div class="form-group">
+                        <label>Título (usa *texto* para dorado)</label>
+                        <input type="text" id="portfolio-title" placeholder="Nuestras *obras*">
+                    </div>
+                    <div class="form-group full">
+                        <label>Descripción</label>
+                        <textarea id="portfolio-description" rows="2" placeholder="Cada proyecto es una oportunidad..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-grid-admin" id="portfolio-items-container"></div>
+            <button class="btn-add" onclick="addPortfolioItem()">+ Agregar imagen de obra</button>
+            <button class="btn-save" onclick="saveSection('portfolio')">Guardar Obras</button>
+        </section>
+
+        <!-- ============ ESTADÍSTICAS ============ -->
+        <section class="admin-section section-numbers">
+            <div class="section-label">Estadísticas</div>
+            <div class="numbers-grid-admin" id="numbers-items-container"></div>
+            <button class="btn-add" onclick="addNumberItem()">+ Agregar estadística</button>
+            <button class="btn-save" onclick="saveSection('numbers')">Guardar Estadísticas</button>
+        </section>
+
+        <!-- ============ CONTACTO ============ -->
+        <section class="admin-section section-contact">
+            <div class="section-label">Contacto</div>
+            <div class="contact-layout">
+                <div class="contact-text-side">
+                    <div class="form-group">
+                        <label>Etiqueta</label>
+                        <input type="text" id="contact-tag" placeholder="Contacto">
+                    </div>
+                    <div class="form-group">
+                        <label>Título (usa *texto* para dorado)</label>
+                        <input type="text" id="contact-title" placeholder="Hablemos de tu *proyecto*">
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <textarea id="contact-description" rows="3" placeholder="Estamos listos para escucharte..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Texto WhatsApp</label>
+                        <input type="text" id="contact-wspTitle" placeholder="WhatsApp">
+                    </div>
+                    <div class="form-group">
+                        <label>Subtexto WhatsApp</label>
+                        <input type="text" id="contact-wspSubtitle" placeholder="Respuesta inmediata">
+                    </div>
+                </div>
+                <div class="contact-img-side">
+                    <div class="dropzone" data-input="contact-image" data-preview="contact-image-preview">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                        <p>Arrastrá imagen o hacé clic</p>
+                        <input type="file" accept="image/*" class="dropzone-file">
+                    </div>
+                    <input type="text" id="contact-image" placeholder="O pegá URL de imagen">
+                    <img id="contact-image-preview" class="img-preview" src="" alt="Preview">
+                </div>
+            </div>
+            <button class="btn-save" onclick="saveSection('contact')">Guardar Contacto</button>
+        </section>
+
+        <!-- ============ FOOTER ============ -->
+        <section class="admin-section section-footer">
+            <div class="section-label">Footer</div>
+            <div class="edit-area compact">
+                <div class="form-group">
+                    <label>Descripción del footer</label>
+                    <textarea id="footer-description" rows="2" placeholder="Mantenimiento, obras y proyectos..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Texto copyright</label>
+                    <input type="text" id="footer-copyright" placeholder="© 2026 JN Servicios Integrales...">
+                </div>
+                <button class="btn-save" onclick="saveSection('footer')">Guardar Footer</button>
+            </div>
+        </section>
+
+        <!-- ============ IMÁGENES ============ -->
+        <section class="admin-section section-images">
+            <div class="section-label">Galería de Imágenes</div>
+            <div class="edit-area">
+                <div class="img-upload-row">
+                    <div class="dropzone dropzone-large" id="img-main-dropzone">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                        <p>Arrastrá una imagen o hacé clic</p>
+                        <small>JPG, PNG, WebP (máx. ~700KB)</small>
+                        <input type="file" accept="image/*" class="dropzone-file">
+                    </div>
+                    <div class="img-upload-fields">
+                        <div class="form-group">
+                            <label>Nombre / Etiqueta</label>
+                            <input type="text" id="img-name" placeholder="Ej: foto-obra-1">
+                        </div>
+                        <div class="form-group">
+                            <label>O pegá URL</label>
+                            <input type="text" id="img-url" placeholder="https://...">
+                        </div>
+                        <img id="img-add-preview" class="img-preview" src="" alt="Preview">
+                        <button class="btn-add" onclick="addImage()">+ Agregar imagen</button>
+                    </div>
+                </div>
+            </div>
+            <div id="images-gallery" class="images-gallery"></div>
+        </section>
+
+        <!-- ============ INICIALIZAR ============ -->
+        <section class="admin-section section-init">
+            <div class="section-label">Inicializar datos</div>
+            <div class="edit-area compact center">
+                <p class="init-desc">Si es la primera vez que usás el panel, cargá los datos iniciales de la página en Firestore.</p>
+                <button class="btn-init" id="initDataBtn">Cargar datos iniciales a Firestore</button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

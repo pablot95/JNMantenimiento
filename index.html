@@ -10,12 +10,12 @@
     <meta property="og:title" content="JN Servicios Integrales | Mantenimiento, Obras y Proyectos">
     <meta property="og:description" content="Soluciones integrales en mantenimiento, obras y proyectos adaptadas a cada cliente. Calidad, eficiencia y profesionalismo.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/logo.jpeg">
+    <meta property="og:image" content="images/logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="JN Servicios Integrales | Mantenimiento, Obras y Proyectos">
     <meta name="twitter:description" content="Soluciones integrales en mantenimiento, obras y proyectos. Calidad premium y atención personalizada.">
     <title>JN Servicios Integrales | Mantenimiento, Obras y Proyectos</title>
-    <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="canonical" href="https://jnserviciosintegrales.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,7 @@
         "@type": "LocalBusiness",
         "name": "JN Servicios Integrales",
         "description": "Empresa especializada en mantenimiento, obras y proyectos. Soluciones integrales adaptadas a cada cliente.",
-        "image": "images/logo.jpeg",
+        "image": "images/logo.png",
         "address": {
             "@type": "PostalAddress",
             "addressCountry": "ES"
@@ -42,7 +42,7 @@
     <nav id="navbar">
         <div class="nav-inner">
             <a href="#inicio" class="nav-logo">
-                <img src="images/logo.jpeg" alt="JN Servicios Integrales" width="48" height="48">
+                <img src="images/logo.png" alt="JN Servicios Integrales" width="48" height="48">
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="#inicio">Inicio</a>
@@ -63,16 +63,16 @@
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-badge reveal">Mantenimiento &middot; Obras &middot; Proyectos</div>
+            <div class="hero-badge reveal" id="fs-hero-badge">Mantenimiento &middot; Obras &middot; Proyectos</div>
             <h1 class="hero-title reveal">
-                <span class="line">Construimos</span>
-                <span class="line accent">soluciones</span>
-                <span class="line">que perduran</span>
+                <span class="line" id="fs-hero-line1">Construimos</span>
+                <span class="line accent" id="fs-hero-line2">soluciones</span>
+                <span class="line" id="fs-hero-line3">que perduran</span>
             </h1>
-            <p class="hero-sub reveal">Servicios integrales adaptados a cada cliente, con la calidad y el profesionalismo que tu proyecto merece.</p>
+            <p class="hero-sub reveal" id="fs-hero-subtitle">Servicios integrales adaptados a cada cliente, con la calidad y el profesionalismo que tu proyecto merece.</p>
             <div class="hero-actions reveal">
-                <a href="#contacto" class="btn btn-gold">Solicitar presupuesto</a>
-                <a href="#obras" class="btn btn-outline">Ver nuestras obras</a>
+                <a href="#contacto" class="btn btn-gold" id="fs-hero-btn1">Solicitar presupuesto</a>
+                <a href="#obras" class="btn btn-outline" id="fs-hero-btn2">Ver nuestras obras</a>
             </div>
         </div>
         <div class="hero-scroll">
@@ -81,32 +81,7 @@
     </header>
 
     <section class="marquee-strip">
-        <div class="marquee-track">
-            <span>Mantenimiento</span>
-            <span class="dot"></span>
-            <span>Obras civiles</span>
-            <span class="dot"></span>
-            <span>Reformas integrales</span>
-            <span class="dot"></span>
-            <span>Proyectos a medida</span>
-            <span class="dot"></span>
-            <span>Rehabilitación</span>
-            <span class="dot"></span>
-            <span>Instalaciones</span>
-            <span class="dot"></span>
-            <span>Mantenimiento</span>
-            <span class="dot"></span>
-            <span>Obras civiles</span>
-            <span class="dot"></span>
-            <span>Reformas integrales</span>
-            <span class="dot"></span>
-            <span>Proyectos a medida</span>
-            <span class="dot"></span>
-            <span>Rehabilitación</span>
-            <span class="dot"></span>
-            <span>Instalaciones</span>
-            <span class="dot"></span>
-        </div>
+        <div class="marquee-track" id="fs-marquee"></div>
     </section>
 
     <div class="shared-bg-wrapper">
@@ -115,18 +90,18 @@
             <div class="about-grid">
                 <div class="about-visual reveal">
                     <div class="about-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Equipo de trabajo en obra de construcción" width="600" height="400" loading="lazy">
+                        <img id="fs-about-image" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Equipo de trabajo en obra de construcción" width="600" height="400" loading="lazy">
                     </div>
                     <div class="about-stat">
-                        <span class="stat-number" data-target="100">0</span><span class="stat-symbol">%</span>
-                        <span class="stat-label">Compromiso</span>
+                        <span class="stat-number" data-target="100" id="fs-about-statNumber">0</span><span class="stat-symbol" id="fs-about-statSymbol">%</span>
+                        <span class="stat-label" id="fs-about-statLabel">Compromiso</span>
                     </div>
                 </div>
                 <div class="about-text">
-                    <span class="section-tag reveal">Sobre nosotros</span>
-                    <h2 class="section-title reveal">Una pyme en constante <em>expansión</em></h2>
-                    <p class="reveal">En JN Servicios Integrales nos dedicamos al mantenimiento, obras y proyectos con un compromiso claro: brindar soluciones integrales y adaptadas a cada cliente, ofreciendo un servicio especializado que maximiza beneficios según sus intereses y necesidades.</p>
-                    <div class="about-features">
+                    <span class="section-tag reveal" id="fs-about-tag">Sobre nosotros</span>
+                    <h2 class="section-title reveal" id="fs-about-title">Una pyme en constante <em>expansión</em></h2>
+                    <p class="reveal" id="fs-about-desc">En JN Servicios Integrales nos dedicamos al mantenimiento, obras y proyectos con un compromiso claro: brindar soluciones integrales y adaptadas a cada cliente, ofreciendo un servicio especializado que maximiza beneficios según sus intereses y necesidades.</p>
+                    <div class="about-features" id="fs-about-features">
                         <div class="feature reveal">
                             <div class="feature-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -163,10 +138,10 @@
     <section id="servicios" class="services">
         <div class="container">
             <div class="services-header">
-                <span class="section-tag reveal">Lo que hacemos</span>
-                <h2 class="section-title reveal">Nuestros <em>servicios</em></h2>
+                <span class="section-tag reveal" id="fs-services-tag">Lo que hacemos</span>
+                <h2 class="section-title reveal" id="fs-services-title">Nuestros <em>servicios</em></h2>
             </div>
-            <div class="services-grid">
+            <div class="services-grid" id="fs-services-grid">
                 <article class="service-card reveal">
                     <div class="service-img">
                         <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80" alt="Servicio profesional de mantenimiento de edificios" width="600" height="400" loading="lazy">
@@ -218,12 +193,12 @@
         <div class="container">
             <div class="cta-inner reveal">
                 <div>
-                    <h2>¿Tienes un proyecto en mente?</h2>
-                    <p>Hablemos sobre cómo podemos hacerlo realidad.</p>
+                    <h2 id="fs-cta-title">¿Tienes un proyecto en mente?</h2>
+                    <p id="fs-cta-subtitle">Hablemos sobre cómo podemos hacerlo realidad.</p>
                 </div>
-                <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20solicitar%20un%20presupuesto" class="btn btn-gold" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20solicitar%20un%20presupuesto" class="btn btn-gold" target="_blank" rel="noopener noreferrer" id="fs-cta-btn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    Escribinos por WhatsApp
+                    <span id="fs-cta-btnText">Escribinos por WhatsApp</span>
                 </a>
             </div>
         </div>
@@ -232,16 +207,17 @@
     <section id="obras" class="portfolio">
         <div class="container">
             <div class="portfolio-header">
-                <span class="section-tag reveal">Resultados reales</span>
-                <h2 class="section-title reveal">Nuestras <em>obras</em></h2>
-                <p class="section-desc reveal">Cada proyecto es una oportunidad para demostrar nuestro compromiso con la calidad. Mirá la transformación.</p>
+                <span class="section-tag reveal" id="fs-portfolio-tag">Resultados reales</span>
+                <h2 class="section-title reveal" id="fs-portfolio-title">Nuestras <em>obras</em></h2>
+                <p class="section-desc reveal" id="fs-portfolio-desc">Cada proyecto es una oportunidad para demostrar nuestro compromiso con la calidad. Mirá la transformación.</p>
             </div>
-            <div class="before-after reveal">
-                <div class="ba-container" id="baContainer">
-                    <img src="images/antesydespues.jpeg" alt="Transformación completa: antes y después de obra realizada por JN Servicios Integrales" width="1200" height="600" loading="lazy" class="ba-img">
+            <div class="portfolio-extra" id="fs-portfolio-items">
+                <div class="pe-card reveal">
+                    <img src="images/antesydespues.jpeg" alt="Antes y después" width="600" height="400" loading="lazy">
+                    <div class="pe-overlay">
+                        <span>Antes y después</span>
+                    </div>
                 </div>
-            </div>
-            <div class="portfolio-extra">
                 <div class="pe-card reveal">
                     <img src="/images/remodelacion.jpg" alt="Detalle de obra finalizada con acabados de calidad" width="600" height="400" loading="lazy">
                     <div class="pe-overlay">
@@ -266,7 +242,7 @@
 
     <section class="numbers">
         <div class="container">
-            <div class="numbers-grid">
+            <div class="numbers-grid" id="fs-numbers-grid">
                 <div class="num-item reveal">
                     <span class="num-value" data-target="150">0</span><span class="num-plus">+</span>
                     <span class="num-label">Proyectos realizados</span>
@@ -291,24 +267,24 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info">
-                    <span class="section-tag reveal">Contacto</span>
-                    <h2 class="section-title reveal">Hablemos de tu <em>proyecto</em></h2>
-                    <p class="reveal">Estamos listos para escucharte. Contanos qué necesitás y te asesoramos sin compromiso. Respuesta rápida garantizada.</p>
+                    <span class="section-tag reveal" id="fs-contact-tag">Contacto</span>
+                    <h2 class="section-title reveal" id="fs-contact-title">Hablemos de tu <em>proyecto</em></h2>
+                    <p class="reveal" id="fs-contact-desc">Estamos listos para escucharte. Contanos qué necesitás y te asesoramos sin compromiso. Respuesta rápida garantizada.</p>
                     <div class="contact-methods">
-                        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20solicitar%20un%20presupuesto" class="contact-wsp reveal" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20solicitar%20un%20presupuesto" class="contact-wsp reveal" target="_blank" rel="noopener noreferrer" id="fs-contact-wsp">
                             <div class="wsp-icon">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             </div>
                             <div>
-                                <strong>WhatsApp</strong>
-                                <span>Respuesta inmediata</span>
+                                <strong id="fs-contact-wspTitle">WhatsApp</strong>
+                                <span id="fs-contact-wspSub">Respuesta inmediata</span>
                             </div>
                             <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                         </a>
                     </div>
                 </div>
                 <div class="contact-visual reveal">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80" alt="Equipo profesional de JN Servicios Integrales trabajando en obra" width="600" height="700" loading="lazy">
+                    <img id="fs-contact-image" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80" alt="Equipo profesional de JN Servicios Integrales trabajando en obra" width="600" height="700" loading="lazy">
                 </div>
             </div>
         </div>
@@ -318,8 +294,8 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="images/logo.jpeg" alt="JN Servicios Integrales" width="56" height="56" loading="lazy">
-                    <p>Mantenimiento, obras y proyectos con la calidad que tu espacio merece.</p>
+                    <img src="images/logo.png" alt="JN Servicios Integrales" width="56" height="56" loading="lazy">
+                    <p id="fs-footer-desc">Mantenimiento, obras y proyectos con la calidad que tu espacio merece.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navegación</h4>
@@ -338,16 +314,29 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 JN Servicios Integrales. Todos los derechos reservados.</p>
+                <p id="fs-footer-copyright">&copy; 2026 JN Servicios Integrales. Todos los derechos reservados.</p>
                 <p class="footer-credit">Developed and designed by: <a href="https://gokywebs.net" target="_blank" rel="noopener noreferrer">Gokywebs</a></p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20solicitar%20un%20presupuesto" class="wsp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20solicitar%20un%20presupuesto" class="wsp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" id="fs-wsp-float">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar">&times;</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Anterior">&#10094;</button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Siguiente">&#10095;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+            <div class="lightbox-counter" id="lightbox-counter"></div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
